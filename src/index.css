@@ -73,6 +73,12 @@ body {
   color: #1a3c24;
 }
 
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -105,6 +111,16 @@ body {
 
 .social-link img:hover {
   opacity: 1;
+}
+
+.menu {
+  display: none; /* Hidden by default on desktop */
+  cursor: pointer;
+}
+
+.menu img {
+  width: 30px;
+  height: 30px;
 }
 
 /* Hero Section */
@@ -413,225 +429,246 @@ body {
 @media (max-width: 1024px) {
   /* Adjust section padding for tablets */
   .section-container {
-      padding: 3rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .hero-title {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   .hero-card {
-      max-width: 32rem;
-      padding: 2.5rem;
+    max-width: 32rem;
+    padding: 2.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  /* Body padding for fixed navbar */
   body {
-      padding-top: 120px; /* Adjust padding for stacked navbar */
+    padding-top: 60px; /* Adjusted for simpler navbar */
   }
 
   /* Navbar */
   .navbar {
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav-container {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-container.active {
+    display: flex; /* Shown when menu is toggled */
   }
 
   .nav-links {
-      flex-direction: column;
-      gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
   }
 
   .social-links {
-      gap: 0.75rem;
+    justify-content: center;
+    padding: 0.5rem 0;
   }
 
   .social-link img {
-      width: 20px;
-      height: 20px;
+    width: 20px;
+    height: 20px;
   }
 
   /* Hero Section */
   .hero-section {
-      min-height: 80vh;
-      padding: 1rem;
+    min-height: 80vh;
+    padding: 1rem;
   }
 
   .hero-card {
-      max-width: 90%;
-      padding: 2rem;
+    max-width: 90%;
+    padding: 2rem;
   }
 
   .hero-title {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .hero-text {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .hero-buttons {
-      flex-direction: column;
-      gap: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .btn-primary, .btn-secondary {
-      padding: 0.75rem 1.5rem;
-      font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 
   .leaf {
-      width: 1.5rem;
-      height: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .scroll-indicator {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   /* About Section */
   .about-section {
-      padding: 2rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .about-content {
-      max-width: 90%;
+    max-width: 90%;
   }
 
   .about-text p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
-  /* Skills Section */
+  /*
+
+ Skills Section */
   .skills-section {
-      padding: 2rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .skills-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .skill-card {
-      padding: 1.5rem;
+    padding: 1.5rem;
   }
 
   .skill-title {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .skill-card p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   /* Projects Section */
   .projects-section {
-      padding: 2rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .projects-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-card {
-      padding: 1.5rem;
+    padding: 1.5rem;
   }
 
   .project-title {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .project-card p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .project-link {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   /* Contact Section */
   .contact-section {
-      padding: 2rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .contact-form {
-      max-width: 90%;
-      gap: 1rem;
+    max-width: 90%;
+    gap: 1rem;
   }
 
   .form-group label {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .form-group input,
   .form-group textarea {
-      padding: 0.5rem;
-      font-size: 0.9rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
 
   .form-group textarea {
-      min-height: 6rem;
+    min-height: 6rem;
   }
 
   /* Footer */
   .footer {
-      padding: 1.5rem;
-      font-size: 0.9rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  /* Further adjustments for small mobile screens */
   body {
-      padding-top: 140px; /* Adjust for taller navbar on very small screens */
+    padding-top: 60px;
   }
 
   .navbar {
-      padding: 1rem 0.5rem;
+    padding: 1rem;
   }
 
   .logo {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
-  .nav-link {
-      font-size: 0.9rem;
+  .menu img {
+    width: 25px;
+    height: 25px;
   }
 
   .hero-section {
-      min-height: 70vh;
+    min-height: 70vh;
   }
 
   .hero-card {
-      padding: 1.5rem;
+    padding: 1.5rem;
   }
 
   .hero-title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .hero-text {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .role-tag {
-      font-size: 0.75rem;
-      padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .btn-primary, .btn-secondary {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 
   .section-heading {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .section-container {
-      padding: 2rem 0.5rem;
+    padding: 2rem 0.5rem;
   }
 }
