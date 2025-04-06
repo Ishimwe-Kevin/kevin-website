@@ -20,7 +20,7 @@ function Contact() {
     emailjs
       .sendForm(
         'service_arbk9lr', // Your Service ID
-        'template_dgn9kx3', // Your Template ID (added 'template_' prefix if needed)
+        'template_8mjlsuh', // Your Template ID (added 'template_' prefix if needed)
         e.target,
         'X_aGhhWs2MW7Q57bx' // Your Public Key
       )
