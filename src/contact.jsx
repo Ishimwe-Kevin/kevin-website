@@ -70,7 +70,7 @@ function Contact() {
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
-              name="message" // Must match template parameter
+              name="title" // Must match template parameter
               placeholder="Your Message"
               required
             ></textarea>
