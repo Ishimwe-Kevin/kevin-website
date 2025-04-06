@@ -24,10 +24,10 @@ function Header() {
             <li><a href="#contact" className="nav-link" onClick={toggleMenu}>Contact</a></li>
           </ul>
           <div className="social-links">
-            <a href="#" className="social-link">
-              <img src="https://img.icons8.com/ios-filled/24/000000/twitter.png" alt="Twitter" />
+            <a href="https://www.instagram.com/ishimwekevin2007/" className="social-link">
+              <img src="https://img.icons8.com/ios-filled/24/000000/instagram.png" alt="instagram" />
             </a>
-            <a href="#" className="social-link">
+            <a href="https://www.linkedin.com/in/kevin-ishimwe-3b1036307/" className="social-link">
               <img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" alt="LinkedIn" />
             </a>
           </div>
